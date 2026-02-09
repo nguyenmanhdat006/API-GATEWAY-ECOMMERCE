@@ -1,8 +1,8 @@
-package com.devteria.gateway.repository;
+package com.ecommerce.gateway.repository;
 
-import com.devteria.gateway.dto.ApiResponse;
-import com.devteria.gateway.dto.request.IntrospectRequest;
-import com.devteria.gateway.dto.response.IntrospectResponse;
+import com.ecommerce.gateway.dto.ApiResponse;
+import com.ecommerce.gateway.dto.request.IntrospectRequest;
+import com.ecommerce.gateway.dto.response.IntrospectResponse;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.service.annotation.PostExchange;
