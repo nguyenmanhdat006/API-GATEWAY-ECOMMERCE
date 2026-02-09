@@ -1,7 +1,7 @@
-package com.devteria.gateway.configuration;
+package com.ecommerce.gateway.configuration;
 
-import com.devteria.gateway.dto.ApiResponse;
-import com.devteria.gateway.service.IdentityService;
+import com.ecommerce.gateway.dto.ApiResponse;
+import com.ecommerce.gateway.service.IdentityService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.netty.handler.codec.http.HttpResponseStatus;

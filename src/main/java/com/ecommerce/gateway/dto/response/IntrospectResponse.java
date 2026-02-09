@@ -1,4 +1,4 @@
-package com.devteria.gateway.dto.response;
+package com.ecommerce.gateway.dto.response;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
