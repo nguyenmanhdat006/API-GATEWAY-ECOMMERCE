@@ -10,7 +10,6 @@
 src/main/java/com/ecommerce/apigateway/
 ├── ApiGatewayApplication.java
 ├── config/
-│   ├── GatewayConfig.java
 │   └── CorsConfig.java
 ├── filter/
 │   ├── AuthenticationFilter.java
@@ -26,16 +25,14 @@ src/main/java/com/ecommerce/apigateway/
 ### ApiGatewayApplication.java
 ```
 @SpringBootApplication
-@EnableDiscoveryClient
 Main method
 ```
 
-### GatewayConfig.java
+### application.yaml
 ```
-@Configuration
-- Configure RouteLocator bean (if needed)
-- Configure rate limiting
-- Configure retry logic
+- Configure gateway routes
+- Configure global filters (retry)
+- Configure service URLs
 ```
 
 ### AuthenticationFilter.java (Optional)
@@ -64,20 +61,23 @@ http://localhost:8080/api/products     → Product Service (8082)
 http://localhost:8080/api/cart         → Cart Service (8083)
 http://localhost:8080/api/orders       → Order Service (8084)
 http://localhost:8080/api/payments     → Payment Service (8085)
+http://localhost:8080/api/auth         → Auth/User Service (8081)
+http://localhost:8080/api/reviews      → Review Service (8086)
+http://localhost:8080/api/notifications → Notification Service (8087)
+http://localhost:8080/api/shipping     → Shipping Service (8088)
 ```
 
-**Load Balancing:**
-- Use `lb://service-name` in routes
-- Eureka provides service instances
-- Gateway automatically load balances
+**Routing mode:**
+- Use service URLs from `application.yaml`
+- No service registry required
+- Configure base URLs with `services.*-url` properties if needed
 
 ---
 
 ## ⚙️ FEATURES
 
 ✅ **Routing** - Route to correct service
-✅ **Load Balancing** - Distribute requests
-✅ **Rate Limiting** - Prevent abuse (Redis required)
+✅ **Direct Service Targeting** - Call backend services by fixed URL
 ✅ **CORS** - Handle cross-origin requests
 ✅ **Centralized Auth** - JWT validation
 ✅ **Logging** - Request/response logging
@@ -89,10 +89,9 @@ http://localhost:8080/api/payments     → Payment Service (8085)
 ## 🧪 TESTING
 
 ```bash
-# Start services in order:
-# 1. Eureka (8761)
-# 2. Individual services (8081-8087)
-# 3. Gateway (8080)
+# Start services:
+# 1. Individual services (8081-8088)
+# 2. Gateway (8080)
 
 # Test routing
 curl http://localhost:8080/api/products

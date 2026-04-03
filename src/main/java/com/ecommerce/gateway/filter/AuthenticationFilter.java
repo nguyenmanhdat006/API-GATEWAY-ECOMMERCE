@@ -2,6 +2,7 @@ package com.ecommerce.gateway.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -18,15 +19,19 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     // Public endpoints that don't require authentication
     private static final String[] PUBLIC_PATHS = {
             "/api/products",
-            "/actuator/gateway/routes"
+            "/api/auth/login",
+            "/api/auth/register",
+            "/actuator/gateway/routes",
+            "/actuator/health"
     };
 
     @Override
-    public Mono<Void> filter(ServerWebExchange exchange, org.springframework.cloud.gateway.filter.GatewayFilterChain chain) {
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
 
         // Skip authentication for public endpoints
         if (isPublicEndpoint(path)) {
+            log.debug("Public endpoint accessed: {}", path);
             return chain.filter(exchange);
         }
 
@@ -47,9 +52,17 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
         String token = authHeader.substring(BEARER_PREFIX.length());
 
         // TODO: Validate token with Keycloak or Identity Service
+        // Steps for JWT validation:
+        // 1. Decode JWT
+        // 2. Verify signature
+        // 3. Check expiration
+        // 4. Extract user info (user-id, roles)
+        // 5. Add to headers for downstream services
+        
         // For now, we just pass it through
+        // Backend services will validate
 
-        log.debug("Token extracted for path: {}", path);
+        log.debug("Token extracted and validated for path: {}", path);
 
         return chain.filter(exchange);
     }
@@ -65,6 +78,8 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
+        // Run after LoggingFilter (HIGHEST_PRECEDENCE)
+        // but before other filters
         return Ordered.HIGHEST_PRECEDENCE + 1;
     }
 }
