@@ -1,5 +1,7 @@
 server:
   port: 8080
+  tomcat:
+    connection-timeout: 20000ms
 
 spring:
   application:
@@ -7,12 +9,45 @@ spring:
 
   cloud:
     gateway:
-      # Enable route discovery from RouteLocator bean
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      # Add global filters
+      httpclient:
+        connect-timeout: 5000
+        response-timeout: 10s
+        compression: true
+
+      routes:
+        - id: product-service
+          uri: ${services.product-url}
+          predicates:
+            - Path=/api/products/**
+        - id: cart-service
+          uri: ${services.cart-url}
+          predicates:
+            - Path=/api/cart/**
+        - id: order-service
+          uri: ${services.order-url}
+          predicates:
+            - Path=/api/orders/**
+        - id: payment-service
+          uri: ${services.payment-url}
+          predicates:
+            - Path=/api/payments/**
+        - id: auth-service
+          uri: ${services.auth-url}
+          predicates:
+            - Path=/api/auth/**
+        - id: review-service
+          uri: ${services.review-url}
+          predicates:
+            - Path=/api/reviews/**
+        - id: notification-service
+          uri: ${services.notification-url}
+          predicates:
+            - Path=/api/notifications/**
+        - id: shipping-service
+          uri: ${services.shipping-url}
+          predicates:
+            - Path=/api/shipping/**
+
       default-filters:
         - name: Retry
           args:
@@ -24,23 +59,39 @@ spring:
               factor: 2
               basedOnPreviousValue: false
 
-    # Eureka client configuration
-    discovery:
-      client:
-        service-url:
-          defaultZone: http://localhost:8761/eureka/
 
-  # Enable actuator endpoints for monitoring
-  endpoints:
-    web:
-      exposure:
-        include: gateway,health
+services:
+  product-url: http://localhost:8082
+  cart-url: http://localhost:8083
+  order-url: http://localhost:8084
+  payment-url: http://localhost:8085
+  auth-url: http://localhost:8081
+  review-url: http://localhost:8086
+  notification-url: http://localhost:8087
+  shipping-url: http://localhost:8088
 
 management:
   endpoints:
     web:
       exposure:
-        include: gateway,health,info
+        include: gateway,health,info,metrics,prometheus
   endpoint:
     gateway:
       enabled: true
+    health:
+      show-details: always
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+
+logging:
+  level:
+    root: INFO
+    com.ecommerce.gateway: DEBUG
+    org.springframework.cloud.gateway: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

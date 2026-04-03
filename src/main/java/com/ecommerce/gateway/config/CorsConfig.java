@@ -7,6 +7,8 @@ import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.Collections;
+
 
 @Configuration
 public class CorsConfig {
@@ -14,13 +16,30 @@ public class CorsConfig {
     @Bean
     public CorsWebFilter corsWebFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.setAllowedOriginPatterns(Arrays.asList("*"));
-        corsConfig.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
-        corsConfig.setAllowedHeaders(Arrays.asList("*"));
+
+        // Allowed origins
+        corsConfig.setAllowedOrigins(Arrays.asList(
+                "http://localhost:3000",    // React dev (CRA)
+                "http://localhost:5173",    // Vite dev
+                "https://yourdomain.com"    // Production
+        ));
+
+        // Allowed methods
+        corsConfig.setAllowedMethods(Arrays.asList(
+                "GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"
+        ));
+
+        // Allowed headers
+        corsConfig.setAllowedHeaders(Collections.singletonList("*"));
+
+        // Allow credentials (cookies, authorization headers)
         corsConfig.setAllowCredentials(true);
+
+        // Cache preflight response for 1 hour
         corsConfig.setMaxAge(3600L);
 
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        UrlBasedCorsConfigurationSource source =
+                new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfig);
 
         return new CorsWebFilter(source);
