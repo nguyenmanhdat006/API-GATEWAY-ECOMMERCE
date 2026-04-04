@@ -18,7 +18,7 @@ spring:
         - id: product-service
           uri: ${services.product-url}
           predicates:
-            - Path=/api/products/**
+            - Path=/api/products/**, /api/categories/**, /api/brands/**
         - id: cart-service
           uri: ${services.cart-url}
           predicates:
