@@ -15,9 +15,6 @@ COPY --from=builder /app/target/api-gateway-*.jar app.jar
 
 EXPOSE 8080
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-    CMD java -cp app.jar org.springframework.boot.loader.PropertiesLauncher \
-    || exit 1
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
