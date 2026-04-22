@@ -70,7 +70,22 @@ http://localhost:8080/api/shipping     → Shipping Service (8088)
 **Routing mode:**
 - Use service URLs from `application.yaml`
 - No service registry required
-- Configure base URLs with `services.*-url` properties if needed
+- Configure base URLs with environment variables via `.env` or `--env-file`
+
+### Environment variables
+
+Copy the example file and adjust URLs as needed:
+
+```bash
+cp .env.example .env
+```
+
+Run Docker with the env file:
+
+```bash
+docker build -t api-gateway:latest .
+docker run --env-file .env -p 8080:8080 api-gateway:latest
+```
 
 ---
 
