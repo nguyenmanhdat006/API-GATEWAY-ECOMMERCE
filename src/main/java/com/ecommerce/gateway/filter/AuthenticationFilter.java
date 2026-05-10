@@ -1,6 +1,6 @@
 package com.ecommerce.gateway.filter;
 
-import com.ecommerce.gateway.config.GatewayProperties;
+import com.ecommerce.gateway.config.AppGatewayProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -25,7 +25,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String BEARER_PREFIX = "Bearer ";
 
-    private final GatewayProperties gatewayProperties;
+    private final AppGatewayProperties appGatewayProperties;
     private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     @Override
@@ -61,7 +61,7 @@ public class AuthenticationFilter implements GlobalFilter, Ordered {
     }
 
     private boolean isPublicPath(String path) {
-        return gatewayProperties.getPublicPaths().stream()
+        return appGatewayProperties.getPublicPaths().stream()
                 .anyMatch(pattern -> pathMatcher.match(pattern, path));
     }
 

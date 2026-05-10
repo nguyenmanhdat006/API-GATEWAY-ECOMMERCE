@@ -11,7 +11,7 @@ import java.util.List;
 @ConfigurationProperties(prefix = "gateway")
 @Getter
 @Setter
-public class GatewayProperties {
+public class AppGatewayProperties {
 
     private List<String> publicPaths = List.of();
 }
