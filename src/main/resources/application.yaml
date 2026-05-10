@@ -3,6 +3,21 @@ server:
   tomcat:
     connection-timeout: 20000ms
 
+gateway:
+  public-paths:
+    - /api/auth/**
+
+    - /api/products/**
+    - /api/categories/**
+    - /api/brands/**
+
+    - /actuator/health
+    - /actuator/health/**
+
+    - /swagger-ui/**
+    - /v3/api-docs/**
+    - /swagger-ui.html
+
 spring:
   application:
     name: api-gateway

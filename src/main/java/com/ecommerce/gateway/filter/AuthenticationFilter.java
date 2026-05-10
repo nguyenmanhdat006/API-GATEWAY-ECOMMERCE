@@ -1,86 +1,86 @@
 package com.ecommerce.gateway.filter;
 
+import com.ecommerce.gateway.config.GatewayProperties;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
+import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.core.io.buffer.DataBuffer;
 import reactor.core.publisher.Mono;
+
+import java.nio.charset.StandardCharsets;
 
 @Slf4j
 @Component
+@RequiredArgsConstructor
 public class AuthenticationFilter implements GlobalFilter, Ordered {
 
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String BEARER_PREFIX = "Bearer ";
 
-    // Public endpoints that don't require authentication
-    private static final String[] PUBLIC_PATHS = {
-            "/api/products",
-            "/api/auth/login",
-            "/api/auth/register",
-            "/actuator/gateway/routes",
-            "/actuator/health"
-    };
+    private final GatewayProperties gatewayProperties;
+    private final AntPathMatcher pathMatcher = new AntPathMatcher();
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String path = exchange.getRequest().getPath().value();
 
-        // Skip authentication for public endpoints
-        if (isPublicEndpoint(path)) {
-            log.debug("Public endpoint accessed: {}", path);
+        if (isPublicPath(path)) {
+            log.debug("[AUTH-FILTER] Public path, skipping auth check: {}", path);
             return chain.filter(exchange);
         }
 
         String authHeader = exchange.getRequest().getHeaders().getFirst(AUTHORIZATION_HEADER);
 
-        if (authHeader == null || authHeader.isEmpty()) {
-            log.warn("Missing authorization header for path: {}", path);
-            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-            return exchange.getResponse().setComplete();
+        if (authHeader == null || authHeader.isBlank()) {
+            log.warn("[AUTH-FILTER] Missing Authorization header for: {}", path);
+            return unauthorizedResponse(exchange, "Missing Authorization header");
         }
 
         if (!authHeader.startsWith(BEARER_PREFIX)) {
-            log.warn("Invalid authorization header format for path: {}", path);
-            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-            return exchange.getResponse().setComplete();
+            log.warn("[AUTH-FILTER] Invalid Authorization format for: {}", path);
+            return unauthorizedResponse(exchange, "Authorization header must start with 'Bearer '");
         }
 
-        String token = authHeader.substring(BEARER_PREFIX.length());
+        String token = authHeader.substring(BEARER_PREFIX.length()).trim();
 
-        // TODO: Validate token with Keycloak or Identity Service
-        // Steps for JWT validation:
-        // 1. Decode JWT
-        // 2. Verify signature
-        // 3. Check expiration
-        // 4. Extract user info (user-id, roles)
-        // 5. Add to headers for downstream services
-        
-        // For now, we just pass it through
-        // Backend services will validate
+        if (token.isBlank()) {
+            log.warn("[AUTH-FILTER] Empty Bearer token for: {}", path);
+            return unauthorizedResponse(exchange, "Bearer token must not be empty");
+        }
 
-        log.debug("Token extracted and validated for path: {}", path);
-
+        log.debug("[AUTH-FILTER] Token present, forwarding to downstream: {}", path);
         return chain.filter(exchange);
     }
 
-    private boolean isPublicEndpoint(String path) {
-        for (String publicPath : PUBLIC_PATHS) {
-            if (path.startsWith(publicPath)) {
-                return true;
-            }
-        }
-        return false;
+    private boolean isPublicPath(String path) {
+        return gatewayProperties.getPublicPaths().stream()
+                .anyMatch(pattern -> pathMatcher.match(pattern, path));
+    }
+
+    private Mono<Void> unauthorizedResponse(ServerWebExchange exchange, String message) {
+        ServerHttpResponse response = exchange.getResponse();
+        response.setStatusCode(HttpStatus.UNAUTHORIZED);
+        response.getHeaders().setContentType(MediaType.APPLICATION_JSON);
+
+        String body = String.format(
+                "{\"success\":false,\"status\":401,\"message\":\"%s\"}",
+                message.replace("\"", "\\\""));
+
+        byte[] bytes = body.getBytes(StandardCharsets.UTF_8);
+        DataBuffer buffer = response.bufferFactory().wrap(bytes);
+        return response.writeWith(Mono.just(buffer));
     }
 
     @Override
     public int getOrder() {
-        // Run after LoggingFilter (HIGHEST_PRECEDENCE)
-        // but before other filters
         return Ordered.HIGHEST_PRECEDENCE + 1;
     }
 }
-
