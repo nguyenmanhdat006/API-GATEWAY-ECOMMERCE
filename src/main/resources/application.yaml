@@ -49,7 +49,7 @@ spring:
         - id: auth-service
           uri: ${services.auth-url}
           predicates:
-            - Path=/api/auth/**
+            - Path=/api/auth/**, /api/users/**
         - id: review-service
           uri: ${services.review-url}
           predicates:
