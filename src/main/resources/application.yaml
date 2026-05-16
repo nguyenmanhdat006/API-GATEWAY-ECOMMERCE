@@ -11,6 +11,8 @@ gateway:
     - /api/categories/**
     - /api/brands/**
 
+    - /api/uploads/**
+
     - /actuator/health
     - /actuator/health/**
 
@@ -62,6 +64,12 @@ spring:
           uri: ${services.shipping-url}
           predicates:
             - Path=/api/shipping/**
+        - id: storage-service
+          uri: ${services.storage-url}
+          predicates:
+            - Path=/api/uploads/**
+          filters:
+            - StripPrefix=1
 
       default-filters:
         - name: Retry
@@ -84,6 +92,7 @@ services:
   review-url: ${REVIEW_SERVICE_URL:http://localhost:8086}
   notification-url: ${NOTIFICATION_SERVICE_URL:http://localhost:8087}
   shipping-url: ${SHIPPING_SERVICE_URL:http://localhost:8088}
+  storage-url: ${STORAGE_SERVICE_URL:http://localhost:8089}
 
 management:
   endpoints:
