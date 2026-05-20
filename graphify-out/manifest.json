@@ -1,0 +1,38 @@
+{
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/mvnw": {
+    "mtime": 1778207177.0098321,
+    "hash": "6dae69a928d8a969a700887b3433aac8"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java": {
+    "mtime": 1778410270.887499,
+    "hash": "25da5871bbbe3f091feb87b78a7e685b"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/config/CorsConfig.java": {
+    "mtime": 1779024897.293126,
+    "hash": "4b580f5573a66efa1ba39ece20135f45"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/config/AppGatewayProperties.java": {
+    "mtime": 1778596925.5335133,
+    "hash": "be5b00b5a9bf189b140b681a834f992b"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java": {
+    "mtime": 1778207177.0103762,
+    "hash": "c5ff64507ae49f4c971dd1dd42aa8e20"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java": {
+    "mtime": 1778658164.814448,
+    "hash": "9ae21a3a7d69ec7dc6fb3059a9e43e3d"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java": {
+    "mtime": 1778227537.1671228,
+    "hash": "159aec6f5a4c3e13f69dd788a16d2e60"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/README.md": {
+    "mtime": 1778207177.0091743,
+    "hash": "3a2c23a290bcfb3f16f79ac957b56bc0"
+  },
+  "/home/thang/Workspace/ecommerce-services/API-GATEWAY-ECOMMERCE/src/main/resources/application.yaml": {
+    "mtime": 1779269933.8225584,
+    "hash": "12911472b3ae6832f693b2217ff76d81"
+  }
+}
