@@ -21,7 +21,7 @@ public class CorsConfig {
         corsConfig.setAllowedOrigins(Arrays.asList(
                 "http://localhost:3000",    // React dev (CRA)
                 "http://localhost:5173",    // Vite dev
-                "https://yourdomain.com"    // Production
+                "https://react-fashion-gilt.vercel.app"    // Production
         ));
 
         // Allowed methods

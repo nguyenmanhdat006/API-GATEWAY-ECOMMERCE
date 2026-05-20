@@ -1,0 +1,855 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "ApiGatewayApplication.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_apigatewayapplication_java",
+      "community": 6,
+      "norm_label": "apigatewayapplication.java"
+    },
+    {
+      "label": "ApiGatewayApplication",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java",
+      "source_location": "L7",
+      "id": "gateway_apigatewayapplication_apigatewayapplication",
+      "community": 6,
+      "norm_label": "apigatewayapplication"
+    },
+    {
+      "label": ".main()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java",
+      "source_location": "L11",
+      "id": "gateway_apigatewayapplication_apigatewayapplication_main",
+      "community": 6,
+      "norm_label": ".main()"
+    },
+    {
+      "label": "CorsConfig.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/CorsConfig.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_config_corsconfig_java",
+      "community": 7,
+      "norm_label": "corsconfig.java"
+    },
+    {
+      "label": "CorsConfig",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/CorsConfig.java",
+      "source_location": "L13",
+      "id": "config_corsconfig_corsconfig",
+      "community": 7,
+      "norm_label": "corsconfig"
+    },
+    {
+      "label": ".corsWebFilter()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/CorsConfig.java",
+      "source_location": "L16",
+      "id": "config_corsconfig_corsconfig_corswebfilter",
+      "community": 7,
+      "norm_label": ".corswebfilter()"
+    },
+    {
+      "label": "AppGatewayProperties.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/AppGatewayProperties.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_config_appgatewayproperties_java",
+      "community": 8,
+      "norm_label": "appgatewayproperties.java"
+    },
+    {
+      "label": "AppGatewayProperties",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/AppGatewayProperties.java",
+      "source_location": "L10",
+      "id": "config_appgatewayproperties_appgatewayproperties",
+      "community": 8,
+      "norm_label": "appgatewayproperties"
+    },
+    {
+      "label": "GlobalErrorHandler.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_exception_globalerrorhandler_java",
+      "community": 5,
+      "norm_label": "globalerrorhandler.java"
+    },
+    {
+      "label": "GlobalErrorHandler",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L21",
+      "id": "exception_globalerrorhandler_globalerrorhandler",
+      "community": 5,
+      "norm_label": "globalerrorhandler"
+    },
+    {
+      "label": "ErrorWebExceptionHandler",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "errorwebexceptionhandler",
+      "community": 5,
+      "norm_label": "errorwebexceptionhandler"
+    },
+    {
+      "label": ".handle()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L29",
+      "id": "exception_globalerrorhandler_globalerrorhandler_handle",
+      "community": 5,
+      "norm_label": ".handle()"
+    },
+    {
+      "label": "AuthenticationFilter.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_filter_authenticationfilter_java",
+      "community": 1,
+      "norm_label": "authenticationfilter.java"
+    },
+    {
+      "label": "AuthenticationFilter",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L20",
+      "id": "filter_authenticationfilter_authenticationfilter",
+      "community": 2,
+      "norm_label": "authenticationfilter"
+    },
+    {
+      "label": "GlobalFilter",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "globalfilter",
+      "community": 1,
+      "norm_label": "globalfilter"
+    },
+    {
+      "label": "Ordered",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "ordered",
+      "community": 1,
+      "norm_label": "ordered"
+    },
+    {
+      "label": ".filter()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L31",
+      "id": "filter_authenticationfilter_authenticationfilter_filter",
+      "community": 2,
+      "norm_label": ".filter()"
+    },
+    {
+      "label": ".isPublicPath()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L63",
+      "id": "filter_authenticationfilter_authenticationfilter_ispublicpath",
+      "community": 2,
+      "norm_label": ".ispublicpath()"
+    },
+    {
+      "label": ".unauthorizedResponse()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L68",
+      "id": "filter_authenticationfilter_authenticationfilter_unauthorizedresponse",
+      "community": 2,
+      "norm_label": ".unauthorizedresponse()"
+    },
+    {
+      "label": ".getOrder()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L82",
+      "id": "filter_authenticationfilter_authenticationfilter_getorder",
+      "community": 2,
+      "norm_label": ".getorder()"
+    },
+    {
+      "label": "LoggingFilter.java",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L1",
+      "id": "src_main_java_com_ecommerce_gateway_filter_loggingfilter_java",
+      "community": 1,
+      "norm_label": "loggingfilter.java"
+    },
+    {
+      "label": "LoggingFilter",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L15",
+      "id": "filter_loggingfilter_loggingfilter",
+      "community": 1,
+      "norm_label": "loggingfilter"
+    },
+    {
+      "label": ".filter()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L22",
+      "id": "filter_loggingfilter_loggingfilter_filter",
+      "community": 1,
+      "norm_label": ".filter()"
+    },
+    {
+      "label": ".getOrder()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L61",
+      "id": "filter_loggingfilter_loggingfilter_getorder",
+      "community": 1,
+      "norm_label": ".getorder()"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 3,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "API GATEWAY",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "api_gateway_ecommerce_readme_api_gateway",
+      "community": 3,
+      "norm_label": "api gateway"
+    },
+    {
+      "label": "STRUCTURE",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "api_gateway_ecommerce_readme_structure",
+      "community": 3,
+      "norm_label": "structure"
+    },
+    {
+      "label": "code:block1 (src/main/java/com/ecommerce/apigateway/)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "id": "api_gateway_ecommerce_readme_codeblock_1",
+      "community": 3,
+      "norm_label": "code:block1 (src/main/java/com/ecommerce/apigateway/)"
+    },
+    {
+      "label": "KEY IMPLEMENTATIONS",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "id": "api_gateway_ecommerce_readme_key_implementations",
+      "community": 0,
+      "norm_label": "key implementations"
+    },
+    {
+      "label": "ApiGatewayApplication.java",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "id": "api_gateway_ecommerce_readme_apigatewayapplication_java",
+      "community": 0,
+      "norm_label": "apigatewayapplication.java"
+    },
+    {
+      "label": "code:block2 (@SpringBootApplication)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "api_gateway_ecommerce_readme_codeblock_2",
+      "community": 0,
+      "norm_label": "code:block2 (@springbootapplication)"
+    },
+    {
+      "label": "application.yaml",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L31",
+      "id": "api_gateway_ecommerce_readme_application_yaml",
+      "community": 0,
+      "norm_label": "application.yaml"
+    },
+    {
+      "label": "code:block3 (- Configure gateway routes)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "id": "api_gateway_ecommerce_readme_codeblock_3",
+      "community": 0,
+      "norm_label": "code:block3 (- configure gateway routes)"
+    },
+    {
+      "label": "AuthenticationFilter.java (Optional)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "id": "api_gateway_ecommerce_readme_authenticationfilter_java_optional",
+      "community": 0,
+      "norm_label": "authenticationfilter.java (optional)"
+    },
+    {
+      "label": "code:block4 (Implement GlobalFilter)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "id": "api_gateway_ecommerce_readme_codeblock_4",
+      "community": 0,
+      "norm_label": "code:block4 (implement globalfilter)"
+    },
+    {
+      "label": "LoggingFilter.java",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "id": "api_gateway_ecommerce_readme_loggingfilter_java",
+      "community": 0,
+      "norm_label": "loggingfilter.java"
+    },
+    {
+      "label": "code:block5 (Implement GlobalFilter, Ordered)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "id": "api_gateway_ecommerce_readme_codeblock_5",
+      "community": 0,
+      "norm_label": "code:block5 (implement globalfilter, ordered)"
+    },
+    {
+      "label": "\ud83d\udd0c ROUTING",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "id": "api_gateway_ecommerce_readme_routing",
+      "community": 4,
+      "norm_label": "\ud83d\udd0c routing"
+    },
+    {
+      "label": "code:block6 (http://localhost:8080/api/products     \u2192 Product Service (80)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "id": "api_gateway_ecommerce_readme_codeblock_6",
+      "community": 4,
+      "norm_label": "code:block6 (http://localhost:8080/api/products     \u2192 product service (80)"
+    },
+    {
+      "label": "Environment variables",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "id": "api_gateway_ecommerce_readme_environment_variables",
+      "community": 4,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "code:bash (cp .env.example .env)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "id": "api_gateway_ecommerce_readme_codeblock_7",
+      "community": 4,
+      "norm_label": "code:bash (cp .env.example .env)"
+    },
+    {
+      "label": "code:bash (docker build -t api-gateway:latest .)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "id": "api_gateway_ecommerce_readme_codeblock_8",
+      "community": 4,
+      "norm_label": "code:bash (docker build -t api-gateway:latest .)"
+    },
+    {
+      "label": "FEATURES",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "id": "api_gateway_ecommerce_readme_features",
+      "community": 3,
+      "norm_label": "features"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_apigatewayapplication_java",
+      "target": "gateway_apigatewayapplication_apigatewayapplication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/ApiGatewayApplication.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "gateway_apigatewayapplication_apigatewayapplication",
+      "target": "gateway_apigatewayapplication_apigatewayapplication_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/CorsConfig.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_config_corsconfig_java",
+      "target": "config_corsconfig_corsconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/CorsConfig.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "config_corsconfig_corsconfig",
+      "target": "config_corsconfig_corsconfig_corswebfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/config/AppGatewayProperties.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_config_appgatewayproperties_java",
+      "target": "config_appgatewayproperties_appgatewayproperties",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_exception_globalerrorhandler_java",
+      "target": "errorwebexceptionhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_exception_globalerrorhandler_java",
+      "target": "exception_globalerrorhandler_globalerrorhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "exception_globalerrorhandler_globalerrorhandler",
+      "target": "errorwebexceptionhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/exception/GlobalErrorHandler.java",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "exception_globalerrorhandler_globalerrorhandler",
+      "target": "exception_globalerrorhandler_globalerrorhandler_handle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_authenticationfilter_java",
+      "target": "globalfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_authenticationfilter_java",
+      "target": "ordered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_authenticationfilter_java",
+      "target": "filter_authenticationfilter_authenticationfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "globalfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "ordered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "filter_authenticationfilter_authenticationfilter_filter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "filter_authenticationfilter_authenticationfilter_ispublicpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "filter_authenticationfilter_authenticationfilter_unauthorizedresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter",
+      "target": "filter_authenticationfilter_authenticationfilter_getorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_loggingfilter_java",
+      "target": "globalfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "filter_loggingfilter_loggingfilter",
+      "target": "globalfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_loggingfilter_java",
+      "target": "ordered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "filter_loggingfilter_loggingfilter",
+      "target": "ordered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter_filter",
+      "target": "filter_authenticationfilter_authenticationfilter_ispublicpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/AuthenticationFilter.java",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "filter_authenticationfilter_authenticationfilter_filter",
+      "target": "filter_authenticationfilter_authenticationfilter_unauthorizedresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_main_java_com_ecommerce_gateway_filter_loggingfilter_java",
+      "target": "filter_loggingfilter_loggingfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "filter_loggingfilter_loggingfilter",
+      "target": "filter_loggingfilter_loggingfilter_filter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/gateway/filter/LoggingFilter.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "filter_loggingfilter_loggingfilter",
+      "target": "filter_loggingfilter_loggingfilter_getorder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "api_gateway_ecommerce_readme_api_gateway",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_api_gateway",
+      "target": "api_gateway_ecommerce_readme_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_api_gateway",
+      "target": "api_gateway_ecommerce_readme_key_implementations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_api_gateway",
+      "target": "api_gateway_ecommerce_readme_routing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_api_gateway",
+      "target": "api_gateway_ecommerce_readme_features",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_structure",
+      "target": "api_gateway_ecommerce_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_key_implementations",
+      "target": "api_gateway_ecommerce_readme_apigatewayapplication_java",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_key_implementations",
+      "target": "api_gateway_ecommerce_readme_application_yaml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_key_implementations",
+      "target": "api_gateway_ecommerce_readme_authenticationfilter_java_optional",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_key_implementations",
+      "target": "api_gateway_ecommerce_readme_loggingfilter_java",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_apigatewayapplication_java",
+      "target": "api_gateway_ecommerce_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_application_yaml",
+      "target": "api_gateway_ecommerce_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_authenticationfilter_java_optional",
+      "target": "api_gateway_ecommerce_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_loggingfilter_java",
+      "target": "api_gateway_ecommerce_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_routing",
+      "target": "api_gateway_ecommerce_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_routing",
+      "target": "api_gateway_ecommerce_readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_environment_variables",
+      "target": "api_gateway_ecommerce_readme_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "api_gateway_ecommerce_readme_environment_variables",
+      "target": "api_gateway_ecommerce_readme_codeblock_8",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "b64d6c12873dc0771306e7854d053c07cd51e81a"
+}
