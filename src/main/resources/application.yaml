@@ -70,6 +70,10 @@ spring:
             - Path=/api/uploads/**
           filters:
             - StripPrefix=1
+        - id: socket-gateway-chat
+          uri: ${services.socket-gateway-url}
+          predicates:
+            - Path=/api/chat/**
 
       default-filters:
         - name: Retry
@@ -93,6 +97,7 @@ services:
   notification-url: ${NOTIFICATION_SERVICE_URL:http://localhost:8087}
   shipping-url: ${SHIPPING_SERVICE_URL:http://localhost:8088}
   storage-url: ${STORAGE_SERVICE_URL:http://localhost:8089}
+  socket-gateway-url: ${SOCKET_GATEWAY_URL:http://localhost:8090}
 
 management:
   endpoints:
